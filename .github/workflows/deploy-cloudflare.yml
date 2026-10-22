@@ -1,0 +1,24 @@
+name: Publicar AMPM na Cloudflare do cliente
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+      - name: Preparar arquivos publicos
+        run: |
+          mkdir -p public
+          cp index.html public/
+          cp -R assets public/
+      - name: Publicar no Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN_AMPM }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_AMPM }}
+          command: pages deploy public --project-name=ampm-instalacao-eletrica --branch=main
