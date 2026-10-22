@@ -173,6 +173,23 @@
 .about-visual img{display:block;width:100%;max-width:none;height:auto;aspect-ratio:1/1;object-fit:contain;margin:0;border-radius:14px;box-shadow:none}
 @media(min-width:901px){.about-layout{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(24px,4vw,55px)}}
 @media(max-width:650px){.about-visual{max-width:min(100%,390px);padding:10px}}
+
+/* AMPM AJUSTE FUNDO 2026 - START */
+.hero-art{display:none}
+@media(max-width:650px){
+  /* Texto legível no topo, arte inteiramente em evidência, botões depois */
+  .hero{min-height:0;display:block;background-image:linear-gradient(180deg,#06142d,#092958 55%,#06132b);background-position:center;background-size:cover}
+  .hero::before{opacity:.25}
+  .hero::after{height:60px;pointer-events:none}
+  .hero-inner{min-height:0;justify-content:flex-start;align-items:stretch;padding:35px 0 66px;gap:20px}
+  .hero h1{font-size:clamp(2rem,9vw,3.3rem);line-height:1.1;max-width:100%}
+  .hero-lead{font-size:1rem;line-height:1.6}
+  .hero-art{display:block;align-self:stretch;width:100%;height:clamp(390px,118vw,520px);border-radius:22px;background: #073472 url('assets/fundo-ampm.webp') no-repeat center center;background-size:cover;box-shadow:0 18px 35px #0005;border:1px solid #e7bb3455}
+  .hero-actions{margin-top:20px;display:flex;flex-direction:column;gap:13px;width:100%}
+  .hero-actions .btn{width:100%;justify-content:center;text-align:center}
+  .trust-row{margin-top:10px}
+}
+/* AMPM AJUSTE FUNDO 2026 - END */
 </style>
   <script type="application/ld+json">{
     "@context":"https://schema.org","@type":"Electrician","name":"AM PM Instalação Elétrica — Antes e Depois",
@@ -224,6 +241,7 @@
         <span class="hero-label">⚡ AM⚡PM · Antes e Depois</span>
         <h1 id="hero-title">Sua instalação elétrica com <span class="highlight">atenção a cada detalhe.</span></h1>
         <p class="hero-lead">Da montagem de padrão à iluminação do seu ambiente. Serviços de instalação e manutenção elétrica em <strong>Goiânia e região.</strong></p>
+        <div class="hero-art" role="img" aria-label="AM PM Instalação Elétrica — Antes e Depois"></div>
         <div class="hero-actions">
           <a class="btn btn-gold" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20AM%2FPM%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">💬 Pedir orçamento no WhatsApp</a>
           <a class="btn btn-outline" href="#servicos">Conhecer serviços ↓</a>
