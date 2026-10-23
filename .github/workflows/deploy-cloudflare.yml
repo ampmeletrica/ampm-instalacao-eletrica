@@ -15,6 +15,7 @@ jobs:
         run: |
           mkdir -p public
           cp index.html public/
+          cp privacidade.html google476dd78a4e542653.html sitemap.xml robots.txt public/
           cp -R assets public/
       - name: Publicar no Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
