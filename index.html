@@ -37,11 +37,24 @@ nav a{transition:color .2s}nav a:hover{color:#0b68c6}
 @media(max-width:950px){.hero-inner{grid-template-columns:1fr;min-height:0;gap:32px;padding:58px 0}.hero-image{width:100%;max-width:830px;justify-self:center;aspect-ratio:1.5}.nav{min-height:85px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.wrap{width:92%}.top .wrap{font-size:.85rem}.nav{flex-direction:column;gap:12px;padding:15px 0}.brand{text-align:center;font-size:1.9rem}.brand small{font-size:.65rem}.nav nav{gap:7px 14px}.nav nav a{font-size:.88rem}.nav-cta{padding:8px 12px}.hero-inner{padding:43px 0 48px}.hero h1{font-size:clamp(2.5rem,10.5vw,3.2rem)}.hero-image{aspect-ratio:1.45;border-width:3px;border-radius:22px}.cards{grid-template-columns:1fr}.card{padding:24px}.hero-actions .btn{flex:1 1 200px}.float{padding:12px 14px;font-size:.9rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* AMPM: cabeçalho com logo original, ajustado para cada tela */
+.header{position:relative;top:auto}
+.header .nav{min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0}
+.header .brand{display:block;width:100%;max-width:100%;padding:0;margin:0;text-align:center;line-height:0;background:#073376}
+.header .brand img{display:block;width:min(100%,620px);height:auto;margin:auto;max-height:240px;object-fit:contain;object-position:center}
+.header .nav nav{display:flex;justify-content:center;align-items:center;gap:8px 18px;flex-wrap:wrap;padding:13px 12px;background:#fff}
+.header .nav nav a{white-space:normal;text-align:center;font-size:clamp(.79rem,2.5vw,.97rem)}
+.header .nav .nav-cta{padding:9px 13px}
+.top .wrap{justify-content:center;gap:8px 28px;text-align:center}
+@media(min-width:900px){.header .brand img{width:min(100%,720px);max-height:270px}}
+@media(max-width:560px){.header .nav{padding:0;gap:0}.header .brand img{width:100%;max-height:none}.header .nav nav{padding:12px 8px;gap:8px 13px}.header .nav nav a{font-size:.84rem}.top .wrap{padding:8px 4px}}
+
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><span>⚡ Goiânia e região · (62) 99918-6824</span><span>Segurança, qualidade e profissionalismo</span></div></div>
-<header class="header"><div class="wrap nav"><a class="brand" href="#inicio" aria-label="AMPM Instalação Elétrica, voltar ao início">AM<span>⚡</span>PM<small>INSTALAÇÃO ELÉTRICA · ANTES E DEPOIS</small></a><nav aria-label="Menu principal"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#empresa">A empresa</a><a href="#contato">Contato</a><a class="nav-cta" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Orçamento no WhatsApp ↗</a></nav></div></header>
+<div class="top"><div class="wrap"><span>⚡ Goiânia e região</span><span>Segurança, qualidade e profissionalismo</span></div></div>
+<header class="header"><div class="wrap nav"><a class="brand" href="#inicio" aria-label="AMPM Instalação Elétrica - início"><img src="assets/logo-ampm.jpg" alt="AM⚡PM Instalação Elétrica — Antes e Depois" width="800" height="520"></a><nav aria-label="Menu principal"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#empresa">A empresa</a><a href="#contato">Contato</a><a class="nav-cta" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Orçamento no WhatsApp ↗</a></nav></div></header>
 <main><section class="hero" id="inicio"><div class="wrap hero-inner"><div><div class="eyebrow">⚡ AM⚡PM · Antes e Depois</div><h1>Energia e segurança para transformar seu ambiente.</h1><p>Instalações, manutenção e soluções elétricas para residências e empresas de Goiânia e região. Atendimento com atenção aos detalhes.</p><div class="hero-actions"><a class="btn btn-yellow" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">💬 Solicitar orçamento</a><a class="btn btn-outline" href="#servicos">Conhecer serviços ↓</a></div><div class="trust"><span>Instalação</span><span>Manutenção</span><span>Proteção elétrica</span></div></div><div class="hero-image"><img src="assets/logo-ampm.jpg" alt="AM⚡PM Instalação Elétrica — Antes e Depois" width="790" height="470" fetchpriority="high"></div></div></section>
 <div class="strip">⚡ AM⚡PM INSTALAÇÃO ELÉTRICA — ANTES E DEPOIS • GOIÂNIA E REGIÃO</div>
 <section id="servicos"><div class="wrap"><div class="section-head"><small>O que fazemos</small><h2>Nossos serviços</h2><p>Do reparo pontual à instalação completa, cuidamos da sua estrutura elétrica.</p></div><div class="cards">
