@@ -65,6 +65,29 @@ nav a{transition:color .2s}nav a:hover{color:#0b68c6}
 @media(max-width:1100px){.about .wrap.about-grid{grid-template-columns:1fr;max-width:760px;gap:24px}.about .about-image{max-width:760px}.about h2{font-size:clamp(2.2rem,5.5vw,3.5rem)}}
 @media(max-width:560px){.about .wrap.about-grid{width:92%}.about .eyebrow{font-size:1.45rem}.about h2{font-size:clamp(2.15rem,9vw,3.1rem)}.float{bottom:95px;right:12px}}
 
+
+/* AMPM_PATCH_DESKTOP_WHATSAPP_V1 */
+/* Evita ultrapassar a tela no modo desktop do Android. */
+html,body{max-width:100%;overflow-x:clip}
+.hero-inner{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:clamp(18px,3vw,42px);max-width:100%}
+.hero-inner>*{min-width:0;max-width:100%}
+.hero h1{font-size:clamp(2.1rem,4.25vw,4.65rem);overflow-wrap:break-word}
+.hero-image{aspect-ratio:auto!important;width:100%!important;min-width:0!important;max-width:100%!important;padding:12px!important;overflow:visible!important;box-sizing:border-box}
+.hero-image img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center!important}
+.about-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.about-grid>*{min-width:0}
+.about-image{aspect-ratio:auto!important;overflow:visible!important;padding:12px!important}
+.about-image img{width:100%!important;height:auto!important;object-fit:contain!important}
+.cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* Ícone enviado pelo usuário, discreto e afastado do rodapé. */
+a.float{position:fixed!important;right:18px!important;bottom:102px!important;width:64px!important;height:64px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;line-height:0!important;border-radius:50%!important;z-index:12!important;transition:opacity .18s,transform .18s!important}
+a.float img{width:100%!important;height:100%!important;object-fit:contain!important;display:block!important;filter:drop-shadow(0 5px 9px #06337655)}
+a.float.ampm-footer-visible{opacity:0!important;pointer-events:none!important;transform:translateY(12px)!important}
+@media(min-width:900px) and (max-width:1190px){.hero h1{font-size:clamp(2rem,3.45vw,3.6rem)}.hero-inner{gap:20px}}
+@media(max-width:899px){.hero-inner{grid-template-columns:minmax(0,1fr)!important}.hero-image{width:100%!important;max-width:740px!important;margin-inline:auto}.about-grid{grid-template-columns:minmax(0,1fr)}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:1fr}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.hero-image{padding:8px!important}a.float{width:58px!important;height:58px!important;right:14px!important;bottom:100px!important}}
+
 </style>
 </head>
 <body>
@@ -85,7 +108,7 @@ nav a{transition:color .2s}nav a:hover{color:#0b68c6}
 <section><div class="wrap"><div class="section-head"><small>Simples assim</small><h2>Como pedir orçamento</h2></div><div class="steps"><div class="step"><div class="number">01</div><h3>Chame no WhatsApp</h3><p>Entre em contato diretamente com a equipe.</p></div><div class="step"><div class="number">02</div><h3>Conte o que precisa</h3><p>Explique o serviço e, se possível, envie fotos do local.</p></div><div class="step"><div class="number">03</div><h3>Combine os próximos passos</h3><p>Converse sobre avaliação, disponibilidade e orçamento.</p></div></div></div></section>
 <section class="faq" id="duvidas"><div class="wrap"><div class="section-head"><small>Dúvidas frequentes</small><h2>Como podemos ajudar?</h2><p>Fale diretamente com a AM⚡PM para esclarecer detalhes antes do serviço.</p></div><details><summary>Vocês atendem residências e empresas?</summary><p>Sim. Oferecemos soluções elétricas residenciais e comerciais em Goiânia e região, conforme a necessidade do serviço.</p></details><details><summary>Posso enviar fotos para pedir orçamento?</summary><p>Sim. Envie uma descrição e, se possível, fotos pelo WhatsApp para ajudar na avaliação inicial. Alguns serviços exigem visita técnica.</p></details><details><summary>Vocês trabalham com quadros de distribuição e proteção?</summary><p>Sim. Entre os serviços estão instalação de DR/IDR, DPS, organização e reforma de quadros de distribuição de circuitos (QDC).</p></details></div></section>
 <section class="contact" id="contato"><div class="wrap"><div class="eyebrow">Goiânia e região</div><h2>Precisando de um eletricista?</h2><p>Entre em contato para solicitar seu orçamento.</p><a class="btn btn-yellow" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Preciso%20de%20um%20eletricista." target="_blank" rel="noopener">💬 WhatsApp: (62) 99918-6824</a></div></section></main>
-<footer><div class="wrap"><span>© 2026 AM⚡PM Instalação Elétrica · Antes e Depois</span><span>Goiânia e região · <a href="politica-de-privacidade.html">Política de Privacidade</a></span></div></footer><a class="float" href="https://wa.me/5562999186824" target="_blank" rel="noopener" aria-label="Fale com a AMPM no WhatsApp">💬 WhatsApp</a>
+<footer><div class="wrap"><span>© 2026 AM⚡PM Instalação Elétrica · Antes e Depois</span><span>Goiânia e região · <a href="politica-de-privacidade.html">Política de Privacidade</a></span></div></footer><a class="float" href="https://wa.me/5562999186824" target="_blank" rel="noopener" aria-label="Fale com a AMPM no WhatsApp"><img src="assets/ampm-whatsapp-icon.png" alt="" width="64" height="64" loading="lazy"></a>
 <script>
 /* Oculta o botão flutuante ao alcançar o rodapé. */
 (function(){
@@ -97,5 +120,12 @@ nav a{transition:color .2s}nav a:hover{color:#0b68c6}
  },{threshold:0,rootMargin:'0px 0px 25px 0px'});
  observer.observe(footer);
 })();
+</script>
+<script>
+/* Não cobrir o rodapé com o botão flutuante */
+(()=>{const b=document.querySelector('a.float'),f=document.querySelector('footer');if(!b||!f)return;
+if(!('IntersectionObserver' in window))return;
+const obs=new IntersectionObserver(es=>b.classList.toggle('ampm-footer-visible',es[0].isIntersecting),{rootMargin:'0px 0px 105px 0px',threshold:0});
+obs.observe(f);})();
 </script>
 </body></html>
