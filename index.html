@@ -50,6 +50,21 @@ nav a{transition:color .2s}nav a:hover{color:#0b68c6}
 @media(min-width:900px){.header .brand img{width:min(100%,720px);max-height:270px}}
 @media(max-width:560px){.header .nav{padding:0;gap:0}.header .brand img{width:100%;max-height:none}.header .nav nav{padding:12px 8px;gap:8px 13px}.header .nav nav a{font-size:.84rem}.top .wrap{padding:8px 4px}}
 
+
+/* Ajuste da seção A Empresa + proteção do rodapé */
+.about{overflow:hidden;background:linear-gradient(135deg,#e3f0ff 0%,#f3f8ff 100%)}
+.about .wrap.about-grid{width:min(1320px,94%);grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(22px,4vw,62px);align-items:center}
+.about .about-image{width:100%;max-width:none;aspect-ratio:auto;overflow:hidden;background:#073376;border:4px solid #ffdf00;border-radius:26px;padding:0;box-shadow:0 18px 38px #0b3a7638}
+.about .about-image img{width:100%;height:auto;max-height:none;object-fit:contain;display:block}
+.about .eyebrow{font-size:clamp(1.2rem,2.7vw,2rem);font-weight:1000;letter-spacing:.055em;color:#073e89!important}
+.about h2{font-size:clamp(2.3rem,4.3vw,4rem);line-height:1.12;letter-spacing:-.025em;color:#082f69;margin:18px 0 24px;text-wrap:balance}
+.about p{font-size:clamp(1.08rem,1.55vw,1.3rem);line-height:1.68}
+.about .btn{font-size:1.08rem;min-height:54px;padding:13px 25px}
+.float{bottom:90px;right:18px;transition:opacity .2s,transform .2s}
+.float.ampm-hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+@media(max-width:1100px){.about .wrap.about-grid{grid-template-columns:1fr;max-width:760px;gap:24px}.about .about-image{max-width:760px}.about h2{font-size:clamp(2.2rem,5.5vw,3.5rem)}}
+@media(max-width:560px){.about .wrap.about-grid{width:92%}.about .eyebrow{font-size:1.45rem}.about h2{font-size:clamp(2.15rem,9vw,3.1rem)}.float{bottom:95px;right:12px}}
+
 </style>
 </head>
 <body>
@@ -71,4 +86,16 @@ nav a{transition:color .2s}nav a:hover{color:#0b68c6}
 <section class="faq" id="duvidas"><div class="wrap"><div class="section-head"><small>Dúvidas frequentes</small><h2>Como podemos ajudar?</h2><p>Fale diretamente com a AM⚡PM para esclarecer detalhes antes do serviço.</p></div><details><summary>Vocês atendem residências e empresas?</summary><p>Sim. Oferecemos soluções elétricas residenciais e comerciais em Goiânia e região, conforme a necessidade do serviço.</p></details><details><summary>Posso enviar fotos para pedir orçamento?</summary><p>Sim. Envie uma descrição e, se possível, fotos pelo WhatsApp para ajudar na avaliação inicial. Alguns serviços exigem visita técnica.</p></details><details><summary>Vocês trabalham com quadros de distribuição e proteção?</summary><p>Sim. Entre os serviços estão instalação de DR/IDR, DPS, organização e reforma de quadros de distribuição de circuitos (QDC).</p></details></div></section>
 <section class="contact" id="contato"><div class="wrap"><div class="eyebrow">Goiânia e região</div><h2>Precisando de um eletricista?</h2><p>Entre em contato para solicitar seu orçamento.</p><a class="btn btn-yellow" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Preciso%20de%20um%20eletricista." target="_blank" rel="noopener">💬 WhatsApp: (62) 99918-6824</a></div></section></main>
 <footer><div class="wrap"><span>© 2026 AM⚡PM Instalação Elétrica · Antes e Depois</span><span>Goiânia e região · <a href="politica-de-privacidade.html">Política de Privacidade</a></span></div></footer><a class="float" href="https://wa.me/5562999186824" target="_blank" rel="noopener" aria-label="Fale com a AMPM no WhatsApp">💬 WhatsApp</a>
+<script>
+/* Oculta o botão flutuante ao alcançar o rodapé. */
+(function(){
+ const footer=document.querySelector('footer');
+ const button=document.querySelector('.float');
+ if(!footer||!button||!('IntersectionObserver' in window))return;
+ const observer=new IntersectionObserver(entries=>{
+   button.classList.toggle('ampm-hidden',entries.some(entry=>entry.isIntersecting));
+ },{threshold:0,rootMargin:'0px 0px 25px 0px'});
+ observer.observe(footer);
+})();
+</script>
 </body></html>
