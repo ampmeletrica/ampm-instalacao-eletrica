@@ -137,12 +137,63 @@ header nav{max-width:100%;justify-content:center}
 @media(max-width:900px){.service-pro-grid{grid-template-columns:1fr;gap:15px}.service-pro-card--wide{grid-column:auto}.service-pro-content,.service-pro-card--wide .service-pro-content{width:72%;min-height:305px;padding:20px}.service-pro-card,.service-pro-card--wide{min-height:305px}.service-pro-photo,.service-pro-card--wide .service-pro-photo{width:54%}.hero-highlights{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){.servicos-premium{padding:55px 0 65px}.servicos-premium .section-head h2{font-size:2.6rem}.service-pro-content,.service-pro-card--wide .service-pro-content{width:81%;min-height:322px;padding:17px 12px 16px 15px}.service-pro-card,.service-pro-card--wide{min-height:322px;border-radius:18px}.service-pro-photo,.service-pro-card--wide .service-pro-photo{width:61%}.service-pro-card:before,.service-pro-card--wide:before{background:linear-gradient(90deg,#07172d 0%,#07172d 38%,#07172df0 60%,#07172d66 90%,#07172d12 100%)}.service-pro-heading{gap:8px}.service-pro-icon{width:40px;height:40px;flex-basis:40px;border-radius:11px}.service-pro-icon svg{width:24px;height:24px}.service-pro-heading h3{font-size:clamp(1rem,4.5vw,1.28rem)}.service-pro-card li{font-size:.86rem;line-height:1.25}.service-pro-card ul{gap:5px}.service-pro-cta{font-size:.78rem;padding:8px 11px}.hero-highlights{grid-template-columns:1fr;gap:9px}.hero-highlight{gap:12px;padding:11px 14px}.hero-highlight-icon{width:43px;height:43px;flex-basis:43px}.hero-highlight strong{font-size:.98rem}.hero-highlight small{font-size:.83rem}}
 @media(prefers-reduced-motion:reduce){.service-pro-card,.step,.btn{transition:none!important}}
+/* AMPM FRASE PRINCIPAL */
+
+.ampm-frase-principal {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 32px 0 0;
+  text-align: left;
+}
+
+.ampm-frase-principal span {
+  display: block;
+  color: #ffdf00;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 850;
+  margin-bottom: 10px;
+}
+
+.ampm-frase-principal strong {
+  display: block;
+  max-width: 1050px;
+  color: white;
+  font-size: clamp(27px, 3.7vw, 49px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  font-weight: 900;
+  text-shadow: 0 3px 14px #001b4f66;
+}
+
+.ampm-frase-principal::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 4px;
+  margin-top: 18px;
+  background: #ffdf00;
+  border-radius: 10px;
+}
+
+@media(max-width:560px) {
+  .ampm-frase-principal {
+    padding-top: 25px;
+  }
+}
+
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><span>⚡ Goiânia e região</span><span>Segurança, qualidade e profissionalismo</span></div></div>
+
 <header class="header"><div class="wrap nav"><a class="brand" href="#inicio" aria-label="AMPM Instalação Elétrica - início"><img src="assets/logo-ampm.jpg" alt="AM⚡PM Instalação Elétrica — Antes e Depois" width="800" height="520"></a><nav aria-label="Menu principal"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#empresa">A empresa</a><a href="#contato">Contato</a><a class="nav-cta" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Orçamento no WhatsApp ↗</a></nav></div></header>
-<main><section class="hero" id="inicio"><div class="wrap hero-inner"><div><div class="eyebrow">AM⚡PM · Antes e Depois</div><h1>Energia e segurança para transformar seu ambiente.</h1><p>Instalações, manutenção e soluções elétricas para residências e empresas de Goiânia e região. Atendimento com atenção aos detalhes.</p><div class="hero-actions"><a class="btn btn-yellow" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">💬 Solicitar orçamento</a><a class="btn btn-outline" href="#servicos">Conhecer serviços ↓</a></div><div class="hero-highlights" aria-label="Nossos diferenciais">
+<main><section class="hero" id="inicio">
+<div class="ampm-frase-principal">
+  <span>Goiânia e região</span>
+  <strong>Segurança, qualidade e profissionalismo</strong>
+</div>
+<div class="wrap hero-inner"><div><div class="eyebrow">AM⚡PM · Antes e Depois</div><h1>Energia e segurança para transformar seu ambiente.</h1><p>Instalações, manutenção e soluções elétricas para residências e empresas de Goiânia e região. Atendimento com atenção aos detalhes.</p><div class="hero-actions"><a class="btn btn-yellow" href="https://wa.me/5562999186824?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">💬 Solicitar orçamento</a><a class="btn btn-outline" href="#servicos">Conhecer serviços ↓</a></div><div class="hero-highlights" aria-label="Nossos diferenciais">
 <div class="hero-highlight"><span class="hero-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h8l-1 8L21 10h-8l1-8Z"/></svg></span><span><strong>Instalações</strong><small>Residenciais e comerciais</small></span></div>
 <div class="hero-highlight"><span class="hero-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L2 18.7 5.3 22l6.3-6.3a5 5 0 0 0 6.4-6.4l-3.7 3.7-3.6-3.6z"/></svg></span><span><strong>Manutenção</strong><small>Revisões e reparos</small></span></div>
 <div class="hero-highlight"><span class="hero-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong>Proteção elétrica</strong><small>DR · DPS · QDC</small></span></div>
